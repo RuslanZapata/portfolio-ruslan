@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import userImg from "../assets/image/user.png"
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -24,7 +25,7 @@ const Hero: React.FC = () => {
               <div className="w-48 h-60 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
                 <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
                   <img
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    src={userImg}
                     alt="Profile"
                     className="w-44 h-56 rounded-full object-cover"
                   />
