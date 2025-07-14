@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Filter } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { projects } from '../data/projects';
 import { Project } from '../types';
