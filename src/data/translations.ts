@@ -2,6 +2,7 @@ import { Translation } from '../types';
 
 export const translations: Record<string, Translation> = {
   es: {
+    logo: '<Lógica + Diseño = Soluciones/>',
     nav: {
       home: 'Inicio',
       about: 'Sobre mí',
@@ -63,6 +64,7 @@ export const translations: Record<string, Translation> = {
     }
   },
   en: {
+    logo: '<Logic + Design = Solutions/>',
     nav: {
       home: 'Home',
       about: 'About',

@@ -19,6 +19,7 @@ export interface Skill {
 }
 
 export interface Translation {
+  logo: string;
   nav: {
     home: string;
     about: string;
