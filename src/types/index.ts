@@ -34,6 +34,7 @@ export interface Translation {
     description: string;
     cta: string;
     downloadCV: string;
+    urlCV: string; // URL to download CV
   };
   about: {
     title: string;

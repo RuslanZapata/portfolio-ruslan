@@ -16,7 +16,8 @@ export const translations: Record<string, Translation> = {
       subtitle: 'Especializado en React, Node.js y Desarrollo Móvil',
       description: 'Creo aplicaciones web y móviles innovadoras que combinan diseño elegante con funcionalidad robusta. Especializado en tecnologías modernas para ofrecer experiencias digitales excepcionales.',
       cta: 'Ver mi trabajo',
-      downloadCV: 'Descargar CV'
+      downloadCV: 'Descargar CV',
+      urlCV: 'https://drive.google.com/file/d/1qgnsFVxSvTaY9WpVCFLC_d9ukzBoUrFJ/view?usp=drive_link' // URL to download CV
     },
     about: {
       title: 'Sobre mí',
@@ -78,7 +79,8 @@ export const translations: Record<string, Translation> = {
       subtitle: 'Specialized in React, Node.js and Mobile Development',
       description: 'I create innovative web and mobile applications that combine elegant design with robust functionality. Specialized in modern technologies to deliver exceptional digital experiences.',
       cta: 'View my work',
-      downloadCV: 'Download CV'
+      downloadCV: 'Download CV',
+      urlCV: 'https://drive.google.com/file/d/1GMRtN4ammoK_mDcwMM8WYCQnL3liYi_Y/view?usp=drive_link' // URL to download CV
     },
     about: {
       title: 'About Me',

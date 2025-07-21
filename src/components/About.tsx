@@ -1,6 +1,6 @@
 import React from 'react';
 import { Award, Users, Code, Calendar } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 const About: React.FC = () => {
   const { t } = useLanguage();

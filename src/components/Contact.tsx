@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
@@ -37,6 +37,7 @@ const Contact: React.FC = () => {
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       setSubmitStatus("error");
+      console.log("Error submitting form:", error);
     } finally {
       setIsSubmitting(false);
     }

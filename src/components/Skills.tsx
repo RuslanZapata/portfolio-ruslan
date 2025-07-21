@@ -1,6 +1,6 @@
 import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
 import { skills } from '../data/skills';
+import { useLanguage } from '../hooks/useLanguage';
 
 const Skills: React.FC = () => {
   const { t } = useLanguage();
