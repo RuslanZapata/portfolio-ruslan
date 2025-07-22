@@ -1,6 +1,6 @@
 import React from "react";
 import { Heart, Code, Coffee } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white">{t.footer.quickLinks}</h4>
             <div className="space-y-2">
               {[
                 { href: "#home", label: t.nav.home },
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Contact Info</h4>
+            <h4 className="text-lg font-semibold text-white">{t.footer.contactInfo}</h4>
             <div className="space-y-2 text-gray-400">
               <p>ruslanzapata@gmail.com</p>
               <p>+1 (555) 123-4567</p>

@@ -1,14 +1,21 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface Project {
   id: string;
   title: string;
-  description: string;
-  longDescription: string;
   image: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
-  features: string[];
   category: 'web' | 'mobile' | 'fullstack';
+  es: ProjectTranslation;
+  en: ProjectTranslation;
+}
+
+export interface ProjectTranslation {
+  description: string;
+  longDescription: string;
+  features: string[];
 }
 
 export interface Skill {
@@ -34,6 +41,7 @@ export interface Translation {
     description: string;
     cta: string;
     downloadCV: string;
+    urlCV: string; // URL to download CV
   };
   about: {
     title: string;
@@ -42,6 +50,7 @@ export interface Translation {
     projects: string;
     clients: string;
     years: string;
+    award: string;
   };
   projects: {
     title: string;
@@ -74,11 +83,39 @@ export interface Translation {
     sending: string;
     success: string;
     error: string;
+    intro: string;
+    description: string;
+    followMe: string;
   };
   footer: {
     description: string;
     rights: string;
+    quickLinks: string;
+    contactInfo: string;
   };
+}
+
+export interface Stat {
+  icon: LucideIcon;
+  value: string;
+  label: string;
+  color: string;
+}
+
+export interface SkillCategory {
+  id: string;
+  label: string;
+  color: string;
+}
+
+export interface ContactInfoItem {
+  icon: LucideIcon;
+  label: {
+    es: string;
+    en: string;
+  };
+  value: string;
+  href: string;
 }
 
 export type Language = 'es' | 'en';

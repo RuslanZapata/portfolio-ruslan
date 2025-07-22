@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
 import userImg from "../assets/image/user.png"
+import { useLanguage } from "../hooks/useLanguage";
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -63,7 +63,8 @@ const Hero: React.FC = () => {
               {t.hero.cta}
             </button>
             <a
-              href="/cv.pdf"
+              href={t.hero.urlCV}
+              target="_blank"
               download
               className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-semibold rounded-lg hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:hover:bg-blue-400 dark:hover:text-white transition-all duration-200 flex items-center space-x-2"
             >

@@ -1,36 +1,18 @@
 import React from 'react';
-import { Award, Users, Code, Calendar } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { aboutStats } from '../data/aboutStats';
+import { useLanguage } from '../hooks/useLanguage';
+
+interface Stat {
+  icon: React.ElementType;
+  value: string;
+  label: string;
+  color: string;
+}
 
 const About: React.FC = () => {
   const { t } = useLanguage();
 
-  const stats = [
-    {
-      icon: Calendar,
-      value: t.about.years,
-      label: t.about.experience,
-      color: 'text-blue-600 dark:text-blue-400'
-    },
-    {
-      icon: Code,
-      value: '50+',
-      label: t.about.projects,
-      color: 'text-purple-600 dark:text-purple-400'
-    },
-    {
-      icon: Users,
-      value: '30+',
-      label: t.about.clients,
-      color: 'text-emerald-600 dark:text-emerald-400'
-    },
-    {
-      icon: Award,
-      value: '15+',
-      label: 'Awards',
-      color: 'text-orange-600 dark:text-orange-400'
-    }
-  ];
+  const stats: Stat[] = aboutStats(t);
 
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
