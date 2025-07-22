@@ -25,7 +25,8 @@ export const translations: Record<string, Translation> = {
       experience: 'Años de experiencia',
       projects: 'Proyectos completados',
       clients: 'Clientes satisfechos',
-      years: '5+'
+      years: '5+',
+      award: 'Premios'
     },
     projects: {
       title: 'Mis Proyectos',
@@ -57,11 +58,16 @@ export const translations: Record<string, Translation> = {
       send: 'Enviar mensaje',
       sending: 'Enviando...',
       success: 'Mensaje enviado exitosamente',
-      error: 'Error al enviar el mensaje'
+      error: 'Error al enviar el mensaje',
+      intro: "Conectemos",
+      description: "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes. ¡No dudes en contactarme si quieres colaborar o simplemente saludar!",
+      followMe: "Sígueme en"
     },
     footer: {
       description: 'Desarrollador Full Stack especializado en crear experiencias digitales excepcionales.',
-      rights: 'Todos los derechos reservados.'
+      rights: 'Todos los derechos reservados.',
+      quickLinks: 'Enlaces rápidos',
+      contactInfo: 'Información de contacto'
     }
   },
   en: {
@@ -88,7 +94,8 @@ export const translations: Record<string, Translation> = {
       experience: 'Years of experience',
       projects: 'Completed projects',
       clients: 'Happy clients',
-      years: '5+'
+      years: '5+',
+      award: 'Awards'
     },
     projects: {
       title: 'My Projects',
@@ -120,11 +127,16 @@ export const translations: Record<string, Translation> = {
       send: 'Send message',
       sending: 'Sending...',
       success: 'Message sent successfully',
-      error: 'Error sending message'
+      error: 'Error sending message',
+      intro: "Let's Connect",
+      description: "I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate or just say hello!",
+      followMe: "Follow Me"
     },
     footer: {
       description: 'Full Stack Developer specialized in creating exceptional digital experiences.',
-      rights: 'All rights reserved.'
+      rights: 'All rights reserved.',
+      quickLinks: 'Quick Links',
+      contactInfo: 'Contact Info'
     }
   }
 };

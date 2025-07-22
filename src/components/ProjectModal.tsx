@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
 
 const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ project, onClose }) => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -40,7 +40,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           />
 
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            {project.longDescription}
+            {project[language].longDescription}
           </p>
 
           <div className="mb-4">
@@ -64,7 +64,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
               {t.projects.features}
             </h4>
             <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300">
-              {project.features.map((feature, index) => (
+              {project[language].features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
             </ul>

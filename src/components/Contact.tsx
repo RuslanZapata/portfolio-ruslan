@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
+import { contactInfo } from "../data/contactInfo";
+import { Send } from "lucide-react";
+import emailjs from "emailjs-com";
+
+const EMAILJS_SERVICE_ID = "service_7pxyznm";
+const EMAILJS_TEMPLATE_ID = "template_dt0p4qi";
+const EMAILJS_USER_ID = "bYPc_JSeyJ8xx2Nr1";
 
 const Contact: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,39 +36,32 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulate form submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      setSubmitStatus("error");
-      console.log("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Configuración de EmailJS (necesitas registrarte en emailjs.com)
+    emailjs.send(
+        EMAILJS_SERVICE_ID, // Reemplaza con tu Service ID de EmailJS
+        EMAILJS_TEMPLATE_ID, // Reemplaza con tu Template ID
+        {
+          to_email: formData.name,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: formData.subject,
+        },
+        EMAILJS_USER_ID // Reemplaza con tu User ID de EmailJS
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "", subject: "" });
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+        setSubmitStatus("error");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "ruslanzapata@gmail.com",
-      href: "mailto:ruslanzapata@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "New York, NY",
-      href: "#",
-    },
-  ];
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
@@ -82,12 +81,10 @@ const Contact: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Let's Connect
+                {t.contact.intro}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                I'm always interested in new opportunities and exciting
-                projects. Feel free to reach out if you'd like to collaborate or
-                just say hello!
+                {t.contact.description}
               </p>
             </div>
 
@@ -101,7 +98,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      {item.label}
+                      {item.label[language]}
                     </h4>
                     <a
                       href={item.href}
@@ -117,7 +114,7 @@ const Contact: React.FC = () => {
             {/* Social Media */}
             <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Follow Me
+                {t.contact.followMe}
               </h4>
               <div className="flex space-x-4">
                 {["Github", "LinkedIn", "Twitter"].map((platform) => (
