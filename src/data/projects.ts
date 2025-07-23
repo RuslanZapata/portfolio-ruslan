@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: "bible-web-app",
     title: "Bible Web App",
-    image: "./src/assets/image/bible-web-app.png",
+    image: "https://raw.githubusercontent.com/RuslanZapata/my-cdn/refs/heads/main/portfolio-ruslan/bible-web-app.png",
     technologies: [
       "React",
       "TypeScript",
