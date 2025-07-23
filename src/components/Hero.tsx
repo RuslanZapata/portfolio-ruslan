@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
 
           <div className="mt-8 flex items-center justify-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/RuslanZapata"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 transform hover:scale-110"
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ruslanzapata/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 transform hover:scale-110"
