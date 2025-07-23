@@ -4,7 +4,8 @@ export const projects: Project[] = [
   {
     id: "bible-web-app",
     title: "Bible Web App",
-    image: "https://raw.githubusercontent.com/RuslanZapata/my-cdn/refs/heads/main/portfolio-ruslan/bible-web-app.png",
+    image:
+      "https://raw.githubusercontent.com/RuslanZapata/my-cdn/refs/heads/main/portfolio-ruslan/bible-web-app.png",
     technologies: [
       "React",
       "TypeScript",
@@ -16,7 +17,7 @@ export const projects: Project[] = [
       "Cypress",
       "Responsive Design",
     ],
-    liveUrl: "",
+    liveUrl: "https://biblia-abierta.vercel.app/",
     githubUrl: "",
     category: "web",
     es: {
@@ -48,6 +49,58 @@ export const projects: Project[] = [
         "Bible API integration (multiple versions)",
         "Smooth animations between chapters",
         "Unit testing (Jest) and E2E (Cypress)",
+      ],
+    },
+  },
+  {
+    id: "kpop-kdrama-word-app",
+    title: "Kpop-Kdrama Word App",
+    image:
+      "https://raw.githubusercontent.com/RuslanZapata/my-cdn/refs/heads/main/portfolio-ruslan/kpop-kdrama-word-app.png",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Firebase Firestore",
+      "Jest",
+      "Detox",
+      "NativeWind",
+      "AdMob",
+      "async-storage",
+      "Lucide"
+    ],
+    liveUrl:
+      "",
+    githubUrl: "https://github.com/RuslanZapata/kpop-kdrama-word-game",
+    category: "mobile",
+    es: {
+      description: "Juego de charadas sobre Kpop y Kdramas",
+      longDescription:
+        "Aplicación móvil interactiva con miles de palabras relacionadas al Kpop y dramas coreanos. Incluye modos competitivos, ranking de jugadores y actualizaciones diarias de contenido.",
+      features: [
+        "Más de 5,000 palabras (grupos, canciones, dramas y actores)",
+        "Modos de juego: Clásico, Contra Reloj y Multijugador",
+        "Autenticación con Google para guardar progreso",
+        "Animaciones fluidas con Lottie",
+        "Sistema de logros y recompensas",
+        "Integración con Firebase para rankings globales",
+        "Monetización con AdMob (banners intersticiales)",
+        "Notificaciones push para eventos especiales",
+      ],
+    },
+    en: {
+      description: "Kpop and Kdrama charades word game",
+      longDescription:
+        "Interactive mobile game featuring thousands of Kpop and Korean drama related words. Includes competitive modes, player rankings and daily content updates.",
+      features: [
+        "5,000+ words (groups, songs, dramas and actors)",
+        "Game modes: Classic, Time Attack and Multiplayer",
+        "Google authentication to save progress",
+        "Smooth animations with Lottie",
+        "Achievements and reward system",
+        "Firebase integration for global rankings",
+        "AdMob monetization (interstitial banners)",
+        "Push notifications for special events",
       ],
     },
   },
