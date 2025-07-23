@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import { contactInfo } from "../data/contactInfo";
-import { Send } from "lucide-react";
+import { Github, Linkedin, Send } from "lucide-react";
 import emailjs from "emailjs-com";
 
 const EMAILJS_SERVICE_ID = "service_7pxyznm";
@@ -37,7 +37,8 @@ const Contact: React.FC = () => {
     setSubmitStatus(null);
 
     // Configuración de EmailJS (necesitas registrarte en emailjs.com)
-    emailjs.send(
+    emailjs
+      .send(
         EMAILJS_SERVICE_ID, // Reemplaza con tu Service ID de EmailJS
         EMAILJS_TEMPLATE_ID, // Reemplaza con tu Template ID
         {
@@ -117,17 +118,20 @@ const Contact: React.FC = () => {
                 {t.contact.followMe}
               </h4>
               <div className="flex space-x-4">
-                {["Github", "LinkedIn", "Twitter"].map((platform) => (
-                  <a
-                    key={platform}
-                    href="#"
-                    className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white transition-all duration-200"
-                  >
-                    <span className="text-sm font-medium">
-                      {platform.charAt(0)}
-                    </span>
-                  </a>
-                ))}
+                <a
+                  href="https://www.linkedin.com/in/ruslanzapata/"
+                  target="_blank"
+                  className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white transition-all duration-200"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://github.com/RuslanZapata"
+                  target="_blank"
+                  className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white transition-all duration-200"
+                >
+                  <Github className="h-6 w-6" />
+                </a>
               </div>
             </div>
           </div>
