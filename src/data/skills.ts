@@ -36,4 +36,5 @@ export const skills: Skill[] = [
   { name: 'Vite', category: 'tools', icon: 'logos:vitejs' },
   { name: 'GitLab', category: 'tools', icon: 'logos:gitlab-icon' },
   { name: 'GitHub', category: 'tools', icon: 'logos:github-icon' },
+  { name: 'GitHub Actions', category: 'tools', icon: 'logos:github-actions' },
 ];

@@ -5,6 +5,7 @@ interface Category {
   id: string;
   label: string;
   color: string;
+  borderColor: string;
 }
 
 interface SkillCardProps {
@@ -24,9 +25,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ category }) => {
       <div className="space-y-4">
         <ul className="flex flex-wrap gap-4 px-1 justify-center max-w-xl mx-auto">
         {filteredSkills.map((skill) => (
-          <li className="flex flex-col items-center justify-center rounded-md w-full max-w-32 bg-gradient-to-r from-blue-600 to-purple-600 gap-2 py-2 px-3 undefined">
+          <li className={`flex flex-col items-center justify-center rounded-lg w-full max-w-32 bg-white dark:bg-gray-900 gap-2 py-2 px-3 undefined border-2 ${category.borderColor}`}>
             <Icon icon={skill.icon} width="40" height="40" />
-            <p className="text-center font-medium text-gray-200 leading-none">{skill.name}</p>
+            <p className="text-center font-medium text-gray-900 dark:text-white leading-none">{skill.name}</p>
           </li>
         ))}
         </ul>
