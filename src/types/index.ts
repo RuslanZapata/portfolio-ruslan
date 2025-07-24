@@ -105,6 +105,7 @@ export interface SkillCategory {
   id: string;
   label: string;
   color: string;
+  borderColor: string;
 }
 
 export interface ContactInfoItem {
