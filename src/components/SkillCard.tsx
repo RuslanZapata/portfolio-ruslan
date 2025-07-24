@@ -1,4 +1,5 @@
 import { skills } from "../data/skills";
+import { Icon } from '@iconify/react';
 
 interface Category {
   id: string;
@@ -16,29 +17,19 @@ const SkillCard: React.FC<SkillCardProps> = ({ category }) => {
   );
 
   return (
-    <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
-      <h3 className={`text-xl font-bold mb-6 ${category.color}`}>
+    <div className="bg-white dark:bg-gray-700 rounded-xl pr-4 pl-4 pt-4 pb-8 shadow-lg">
+      <h3 className={`text-xl font-bold mb-4 ${category.color}`}>
         {category.label}
       </h3>
       <div className="space-y-4">
-        {filteredSkills.map((skill, index) => (
-          <div key={index} className="space-y-2">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-700 dark:text-gray-300 font-medium">
-                {skill.name}
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {skill.level}%
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-              <div
-                className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                style={{ width: `${skill.level}%` }}
-              ></div>
-            </div>
-          </div>
+        <ul className="flex flex-wrap gap-4 px-1 justify-center max-w-xl mx-auto">
+        {filteredSkills.map((skill) => (
+          <li className="flex flex-col items-center justify-center rounded-md w-full max-w-32 bg-gradient-to-r from-blue-600 to-purple-600 gap-2 py-2 px-3 undefined">
+            <Icon icon={skill.icon} width="40" height="40" />
+            <p className="text-center font-medium text-gray-200 leading-none">{skill.name}</p>
+          </li>
         ))}
+        </ul>
       </div>
     </div>
   );

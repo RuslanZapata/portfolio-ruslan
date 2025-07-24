@@ -2,39 +2,38 @@ import { Skill } from '../types';
 
 export const skills: Skill[] = [
   // Frontend
-  { name: 'React', level: 95, category: 'frontend' },
-  { name: 'TypeScript', level: 90, category: 'frontend' },
-  { name: 'Next.js', level: 85, category: 'frontend' },
-  { name: 'Vue.js', level: 80, category: 'frontend' },
-  { name: 'HTML/CSS', level: 95, category: 'frontend' },
-  { name: 'Tailwind CSS', level: 90, category: 'frontend' },
-  { name: 'SASS/SCSS', level: 85, category: 'frontend' },
-  { name: 'Redux', level: 85, category: 'frontend' },
+  { name: 'React', category: 'frontend', icon: 'logos:react' },
+  { name: 'TypeScript', category: 'frontend', icon: 'logos:typescript-icon' },
+  { name: 'Next.js', category: 'frontend', icon: 'logos:nextjs-icon' },
+  { name: 'Vue.js', category: 'frontend', icon: 'logos:vue' },
+  { name: 'HTML', category: 'frontend', icon: 'logos:html-5' },
+  { name: 'CSS', category: 'frontend', icon: 'logos:css-3' },
+  { name: 'Tailwind CSS', category: 'frontend', icon: 'logos:tailwindcss-icon' },
+  { name: 'SASS', category: 'frontend', icon: 'logos:sass' },
+  { name: 'Redux', category: 'frontend', icon: 'logos:redux' },
   
   // Backend
-  { name: 'Node.js', level: 90, category: 'backend' },
-  { name: 'Express.js', level: 85, category: 'backend' },
-  { name: 'MongoDB', level: 80, category: 'backend' },
-  { name: 'PostgreSQL', level: 85, category: 'backend' },
-  { name: 'GraphQL', level: 75, category: 'backend' },
-  { name: 'REST APIs', level: 90, category: 'backend' },
-  { name: 'Laravel', level: 70, category: 'backend' },
-  { name: 'Firebase', level: 85, category: 'backend' },
+  { name: 'Node.js', category: 'backend', icon: 'logos:nodejs-icon' },
+  { name: 'MongoDB', category: 'backend', icon: 'logos:mongodb-icon' },
+  { name: 'PostgreSQL', category: 'backend', icon: 'logos:postgresql' },
+  { name: 'GraphQL', category: 'backend', icon: 'logos:graphql' },
+  { name: 'Firebase', category: 'backend', icon: 'logos:firebase-icon' },
   
   // Mobile
-  { name: 'React Native', level: 85, category: 'mobile' },
-  { name: 'Flutter', level: 70, category: 'mobile' },
-  { name: 'Expo', level: 80, category: 'mobile' },
-  { name: 'iOS Development', level: 65, category: 'mobile' },
-  { name: 'Android Development', level: 70, category: 'mobile' },
-  
+  { name: 'React Native', category: 'mobile', icon: 'logos:react' },
+  { name: 'Flutter', category: 'mobile', icon: 'logos:flutter' },
+  { name: 'Expo', category: 'mobile', icon: 'logos:expo-icon' },
+  { name: 'XCode', category: 'mobile', icon: 'logos:xcode' },
+  { name: 'Android Studio', category: 'mobile', icon: 'logos:android-icon' },
+
   // Tools
-  { name: 'Git', level: 95, category: 'tools' },
-  { name: 'Docker', level: 75, category: 'tools' },
-  { name: 'AWS', level: 70, category: 'tools' },
-  { name: 'Figma', level: 85, category: 'tools' },
-  { name: 'Jest', level: 80, category: 'tools' },
-  { name: 'Webpack', level: 75, category: 'tools' },
-  { name: 'Vite', level: 85, category: 'tools' },
-  { name: 'CI/CD', level: 75, category: 'tools' }
+  { name: 'Git', category: 'tools', icon: 'logos:git-icon' },
+  { name: 'Docker', category: 'tools', icon: 'logos:docker-icon' },
+  { name: 'AWS', category: 'tools', icon: 'logos:aws' },
+  { name: 'Figma', category: 'tools', icon: 'logos:figma' },
+  { name: 'Jest', category: 'tools', icon: 'logos:jest' },
+  { name: 'Webpack', category: 'tools', icon: 'logos:webpack' },
+  { name: 'Vite', category: 'tools', icon: 'logos:vitejs' },
+  { name: 'GitLab', category: 'tools', icon: 'logos:gitlab-icon' },
+  { name: 'GitHub', category: 'tools', icon: 'logos:github-icon' },
 ];

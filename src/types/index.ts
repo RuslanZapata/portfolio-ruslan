@@ -20,9 +20,8 @@ export interface ProjectTranslation {
 
 export interface Skill {
   name: string;
-  level: number;
   category: 'frontend' | 'backend' | 'mobile' | 'tools';
-  icon?: string;
+  icon: string;
 }
 
 export interface Translation {
